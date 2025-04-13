@@ -16,6 +16,12 @@
 # include <unistd.h>
 # include <limits.h>
 
+typedef struct s_list
+{
+	void			*content;
+	struct s_list	*next;
+}	t_list;
+
 //=============== base ===============//
 int		ft_atoi(const char *str);
 char	*ft_itoa(int n);
