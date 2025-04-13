@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_memmove.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: acaes <acaes@student.s19.be>               +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/04/13 18:27:02 by acaes             #+#    #+#             */
+/*   Updated: 2025/04/13 18:27:02 by acaes            ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "../../../inc/libft.h"
 
 void	*ft_memvove(void *dst, const void *src, size_t n)
@@ -7,7 +19,6 @@ void	*ft_memvove(void *dst, const void *src, size_t n)
 
 	psrc = (unsigned char *)src;
 	pdst = (unsigned char *)dst;
-
 	if (n == 0 || dst == src)
 		return (dst);
 	if (pdst > psrc)
