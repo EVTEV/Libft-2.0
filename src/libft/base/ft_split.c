@@ -55,10 +55,10 @@ static char	*ft_copy(const char *str, char c)
 
 static char	**free_split(char **tab, int j)
 {
-    while (j >= 0)
-        free(tab[j--]);
-    free(tab);
-    return (NULL);
+	while (j >= 0)
+		free(tab[j--]);
+	free(tab);
+	return (NULL);
 }
 
 char	**ft_split(const char *str, char c)
