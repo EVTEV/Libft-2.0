@@ -17,7 +17,7 @@ size_t	ft_strlcat(char *dst, const char *src, size_t n)
 	size_t	lsrc;
 	size_t	ldst;
 
-	lscr = ft_strlen(src);
+	lsrc = ft_strlen(src);
 	ldst = ft_strlen(dst);
 	if (ldst >= n)
 		return (n + lsrc);

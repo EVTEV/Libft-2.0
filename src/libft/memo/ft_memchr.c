@@ -12,7 +12,7 @@
 
 #include "../../../inc/libft.h"
 
-void	*ft_memchr(const void *str, int c, sixe_t n)
+void	*ft_memchr(const void *str, int c, size_t n)
 {
 	unsigned char	*pstr;
 	size_t			i;

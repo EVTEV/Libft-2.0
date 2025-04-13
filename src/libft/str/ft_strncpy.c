@@ -1,21 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putendl.c                                       :+:      :+:    :+:   */
+/*   ft_strncpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: acaes <acaes@student.s19.be>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/04/10 20:26:30 by acaes             #+#    #+#             */
-/*   Updated: 2025/04/10 20:26:30 by acaes            ###   ########.fr       */
+/*   Created: 2025/04/13 19:15:20 by acaes             #+#    #+#             */
+/*   Updated: 2025/04/13 19:15:20 by acaes            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../../inc/libft.h"
 
-void	ft_putendl(char *str)
+char	*ft_strncpy(char *dst, const char *src, size_t n)
 {
-	if (!str)
-		return ;
-	write(1, str, ft_strlen(str));
-	write(1, "\n", 1);
+    size_t	i;
+
+    i = 0;
+    if (!dst || !src)
+        return (NULL);
+    while (i < n && src[i])
+    {
+        dst[i] = src[i];
+        i++;
+    }
+    while (i < n)
+    {
+        dst[i] = '\0';
+        i++;
+    }
+    return (dst);
 }

@@ -3,7 +3,7 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: acaes <acaes@student.s19.be>               +#+  +:+       +#+        */
+/*   By: acaes <acaes@student.s19.be>               +#+  +:+         +:+     */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/13 18:21:44 by acaes             #+#    #+#             */
 /*   Updated: 2025/04/13 18:21:44 by acaes            ###   ########.fr       */
@@ -25,7 +25,7 @@ static int	word_count(const char *str, char c)
 			i++;
 		if (str[i])
 			count++;
-		while (s[i] && s[i] != c)
+		while (str[i] && str[i] != c)
 			i++;
 	}
 	return (count);
@@ -51,6 +51,14 @@ static char	*ft_copy(const char *str, char c)
 	}
 	word[i] = '\0';
 	return (word);
+}
+
+static char	**free_split(char **tab, int j)
+{
+    while (j >= 0)
+        free(tab[j--]);
+    free(tab);
+    return (NULL);
 }
 
 char	**ft_split(const char *str, char c)

@@ -17,13 +17,16 @@ INC = ./inc
 SRC = ./src
 OBJ = ./obj
 
-LIBFT = $(wildcard $(SRC)/libft/base/*.c)
-		$(wildcard $(SRC)/libft/isas/*.c)
-		$(wildcard $(SRC)/libft/list/*.c)
-		$(wildcard $(SRC)/libft/memo/*.c)
-		$(wildcard $(SRC)/libft/str/*.c)
+LIBFT = $(wildcard $(SRC)/libft/base/*.c) \
+        $(wildcard $(SRC)/libft/isas/*.c) \
+        $(wildcard $(SRC)/libft/list/*.c) \
+        $(wildcard $(SRC)/libft/memo/*.c) \
+        $(wildcard $(SRC)/libft/str/*.c)
 
-SOURCE = $(LIBFT) $(PRINTF) $(GNL)
+#PRINTF = 
+#GNL =
+
+SOURCE = $(LIBFT) #$(PRINTF) $(GNL)
 OBJET = $(SOURCE:$(SRC)/%.c=$(OBJ)/%.o)
 
 CC = cc

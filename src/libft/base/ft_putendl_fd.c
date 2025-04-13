@@ -1,18 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putchar.c                                       :+:      :+:    :+:   */
+/*   ft_putendl_fd.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: acaes <acaes@student.s19.be>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/04/10 20:24:33 by acaes             #+#    #+#             */
-/*   Updated: 2025/04/10 20:24:33 by acaes            ###   ########.fr       */
+/*   Created: 2025/04/10 20:26:30 by acaes             #+#    #+#             */
+/*   Updated: 2025/04/10 20:26:30 by acaes            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../../inc/libft.h"
 
-void	ft_putchar(char c)
+void	ft_putendl_fd(char *str, int fd)
 {
-	write(1, &c, 1);
+	if (!str)
+		return ;
+	write(fd, str, ft_strlen(str));
+	write(fd, "\n", 1);
 }
