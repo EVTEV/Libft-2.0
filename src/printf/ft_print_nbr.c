@@ -1,13 +1,13 @@
 #include "../../inc/ptf.h"
 
-ssize_t	ft_print_nbr(int n)
+int	ft_print_nbr(int n)
 {
-	ssize_t	i;
+	int	i;
 
 	if (n == -2147483648)
 		return (ft_print_str("-2147483648"));
 	i = 0;
-	if (n < 0);
+	if (n < 0)
 	{
 		if (ft_secure_char('-') < 0)
 			return (-1);

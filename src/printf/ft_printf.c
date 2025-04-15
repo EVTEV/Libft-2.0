@@ -5,17 +5,17 @@ static int	ft_flag(const char *format, va_list *args)
 	if (*format == 'c')
 		return (ft_secure_char(va_arg(*args, int)));
 	else if (*format == 's')
-		return (ft_print_str(va_args(*args, char *)));
+		return (ft_print_str(va_arg(*args, char *)));
 	else if (*format == 'p')
-		return (ft_print_ptr(va_args(*args, void *)));
+		return (ft_print_ptr(va_arg(*args, void *)));
 	else if (*format == 'd')
-		return (ft_print_nbr(va_args(*args, int)));
+		return (ft_print_nbr(va_arg(*args, int)));
 	else if (*format == 'u')
-		return (ft_print_unsigned(va_args(*args, unsigned int)));
+		return (ft_print_unsigned(va_arg(*args, unsigned int)));
 	else if (*format == 'x')
-		return (ft_print_hexlow(va_args(*args, unsigned int)));
+		return (ft_print_hexlow(va_arg(*args, unsigned int)));
 	else if (*format == 'X')
-		return (ft_print_hexup(va_args(*args, unsigned int)));
+		return (ft_print_hexup(va_arg(*args, unsigned int)));
 	else if (*format == '%')
 		return (ft_secure_char('%'));
 	else
@@ -47,7 +47,7 @@ static int	ft_format(const char *format, va_list *args)
 		}
 		format++;
 	}
-	return (len)
+	return (len);
 }
 
 int	ft_printf(const char *format, ...)

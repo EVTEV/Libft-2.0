@@ -2,7 +2,7 @@
 
 int	ft_print_unsigned(unsigned int n)
 {
-	ssize_t	i;
+	int	i;
 
 	i = 0;
 	if (n > 9)

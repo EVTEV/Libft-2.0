@@ -1,6 +1,6 @@
-#include "../../inc/.ptf.h"
+#include "../../inc/ptf.h"
 
-int	ft_print_ptf(void *ptr)
+int	ft_print_ptr(void *ptr)
 {
 	int	i;
 
