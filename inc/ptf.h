@@ -1,8 +1,8 @@
 #ifndef PTF_H
 # define PTF_H
 
-# include <stdarg.h>
 # include "libft.h"
+# include <stdarg.h>
 
 # ifndef __linux__
 #  define NULL_STR "(null)"

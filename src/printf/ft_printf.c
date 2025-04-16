@@ -24,7 +24,7 @@ static int	ft_flag(const char *format, va_list *args)
 
 static int	ft_format(const char *format, va_list *args)
 {
-	int	i;	
+	int	i;
 	int	len;
 
 	len = 0;

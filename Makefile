@@ -24,9 +24,9 @@ LIBFT = $(wildcard $(SRC)/libft/base/*.c) \
         $(wildcard $(SRC)/libft/str/*.c)
 
 PRINTF = $(wildcard $(SRC)/printf/*.c)
-#GNL =
+GNL = $(wildcard $(SRC)/gnl/*.c)
 
-SOURCE = $(LIBFT) $(PRINTF) #$(GNL)
+SOURCE = $(LIBFT) $(PRINTF) $(GNL)
 OBJET = $(SOURCE:$(SRC)/%.c=$(OBJ)/%.o)
 
 CC = cc
